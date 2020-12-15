@@ -219,6 +219,10 @@ impl<'de> Reader<'de> {
         Self::new(buffer, address, fxb_type, width, root_width)
     }
     /// Returns the FlexBufferType of this Reader.
+    pub fn address(&self) -> usize {
+        self.address
+    }
+    /// Returns the FlexBufferType of this Reader.
     pub fn flexbuffer_type(&self) -> FlexBufferType {
         self.fxb_type
     }
